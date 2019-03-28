@@ -1,0 +1,57 @@
+.gridContainer {
+    background-color: #e58910;
+}
+
+.resultCard {
+    background-color: #f9f9f9e8;
+    height: 350px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+    
+.serviceType {
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    margin-top: 8px;
+}
+    
+.bisName {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.swapperName {
+    font-size: 20px;
+}
+
+
+@media (min-width: 856px) {
+    .gridContainer {
+        display: grid;   
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5%;
+        grid-row-gap: 1%;
+        padding: 2%;
+        
+    }
+    
+    .resultCard {
+        border-radius: 5%;
+        line-height: 2;
+    }
+
+}
+
+@media (max-width: 855px) {
+    .gridContainer { 
+        padding: 5%;
+    }
+    
+    .resultCard {
+        border-radius: 3%;
+    }
+
+}
+
+
+

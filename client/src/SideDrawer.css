@@ -1,0 +1,78 @@
+.sideDrawer {
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    max-width: 340px;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.7s ease-out;
+}
+    
+.sideDrawer.open {
+    transform: translateX(0);
+}
+
+.sideDrawer ul {
+    height: 12%;
+    margin-left: -10%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sideDrawer a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Poiret One', cursive;
+}
+
+.sideDrawer a:hover,
+.sideDraer a:active {
+    font-size: 26px;
+    animation: shake 0.5s;
+    animation-iteration-count: .4;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@media (min-width: 800px) {
+    .sideDrawer a {
+        font-size: 35px;
+    }
+    
+    .sideDrawer a:hover,
+    .sideDraer a:active {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 799px) {
+    .sideDrawer a {
+        font-size: 23px;
+    }
+    
+    .sideDrawer a:hover,
+    .sideDraer a:active {
+        font-size: 26px;
+    }
+}

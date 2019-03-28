@@ -1,0 +1,165 @@
+.userProfileBackground{
+    margin-bottom: 2%;
+    margin-top: 150px;
+}
+
+.editButton, .saveButton{
+    width: 30px;
+    height: 30px;
+}
+
+.editUserForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.profileContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: max-content;
+    align-items: center;
+}
+
+.profileStarter {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    text-align: center;
+    background-color: #292929;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    color: white;
+    height: 350px;
+    padding-bottom: 2%;
+}
+
+.profileImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 5%;
+}
+
+.profileSwapperName {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+
+.cashMonay {
+    width: 10%;
+}
+
+.profileBucks {
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+
+
+
+.userProfileInfo{
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding: 2%;
+    height: auto;
+    border: 3px solid #292929;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+}
+
+.profileInfo {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding:2%;
+    height: auto;
+    border: 3px solid #292929;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+}
+
+.profileBisName {
+    font-size: 26px;
+}
+
+.profileName {
+    line-height: 1.5;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: #e58910
+}
+
+.profileService {
+    font-size: 24px;
+}
+
+.profileContactTitle {
+    font-size: 26px;
+}
+
+.profileHireBtn {
+    margin-top: -1%;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    line-height: 2.5;
+    background-color: #292929;
+    border: 3px solid #292929;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.profileHireBtn:hover {
+    background-color: #e58910;
+    border: 3px solid #e58910;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.editButtonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.editButton{
+    height: 30px;
+    width: auto;    
+}
+
+textarea{
+    height: 170px;
+    width: 40%;
+}
+
+.editUserForm{
+    padding-top: 5%;
+    height: 270vh;
+}
+
+
+.submitButton{
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+.loginBackground{
+    background-image: url('https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3;
+    font-size: 20px;
+    background-color: #ffffff00;
+}
+
+.toggleForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm{
+    padding-top: 9%;
+    padding-bottom: 9%;
+    height: 458px;
+}
+.signUpForm{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #ffffff00;
+    height: 290vh;
+}
+
+.loginForm, .signUpForm{
+    line-height: 3;
+    margin-top: 24vh;
+}
+
+.signUpInputs{
+    width: 40%;
+}
+
+textarea{
+    height: 100px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;    
+    margin-bottom: 5%;
+    font-family: 'Poiret One', cursive;
+    border: 1px solid #DDDDDD;
+    background-color: #f9f9f9;
+}
+
+input{
+    width: 20%;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #DDDDDD;
+    background-color: #f9f9f9;
+    font-family: 'Poiret One', cursive;
+}
+
+input:focus, textarea:focus, button:focus{
+    outline: none;
+}
+
+.submitButton{
+    width: 10%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    color: white;
+}
+
+.toggleButton{
+    background: none;
+    border: none;
+    width: 20%;
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+}
+
+
+
+@media (max-width: 700px) {
+
+    input, .toggleButton, .signUpInputs{
+        width: 40%;
+    }
+
+    .submitButton{
+        width: 20%
+    }
+}

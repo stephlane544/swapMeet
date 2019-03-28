@@ -1,0 +1,137 @@
+.resAndComercBody, .autoBody, .eventsBody, .craftsBody, .educationBody, .wellnessBody{
+    margin-top: 24vh;
+}
+
+.serviceCard:hover{
+    cursor: pointer
+}
+
+.autoTitleContainer {
+    background-image: url("https://images.pexels.com/photos/1534609/pexels-photo-1534609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.craftsTitleContainer {
+    background-image: url("https://images.pexels.com/photos/243059/pexels-photo-243059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.educationTitleContainer{
+    background-image: url("https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.eventsTitleContainer {
+    background-image: url("https://images.pexels.com/photos/796607/pexels-photo-796607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.RACTitleContainer {
+    background-image: url("https://images.pexels.com/photos/1598213/pexels-photo-1598213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.wellnessTitleContainer {
+    background-image: url("https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.autoTitleContainer, .craftsTitleContainer, .educationTitleContainer, .eventsTitleContainer, .RACTitleContainer, .wellnessTitleContainer{
+    background-size: cover;
+    align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: table;
+    width: 100%;
+    margin-top: 24vh;
+}
+
+.serviceTitle{
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 150px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    line-height: 1.5;
+    height: 400px
+}
+/* 
+.autoBody{
+    background-color: #e58910;
+    height: 500vh;
+} */
+
+.serviceContainer {
+    background-color: #e58910;
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-rows: min-content;
+    grid-gap: 5%;
+    padding: 5%;
+    height: 150vh;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+    
+.serviceCard {
+    background-color: #f9f9f9e8;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 2;
+}
+    
+.serviceBisName {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+.serviceSwapperName {
+    font-size: 26px;
+}
+
+.serviceService {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.serviceLocation {
+    font-weight: 900;
+}
+
+
+
+@media (min-width: 1251px) {
+    .serviceContainer {
+        grid-template-columns: repeat(4, 1fr);        
+    }
+}
+
+@media (max-width: 1250px) and (min-width: 951px){
+    .serviceContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .serviceTitle{
+        font-size: 100px
+    }
+}
+
+
+@media (max-width: 950px) and (min-width: 700px){
+    .serviceContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .serviceTitle{
+        font-size: 80px
+    }
+}
+
+@media (max-width: 700px) {
+    .serviceContainer {
+        justify-content: center;
+    }
+
+    .serviceTitle{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: 50px
+    }
+}
