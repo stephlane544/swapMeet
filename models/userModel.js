@@ -34,14 +34,6 @@ const userSchema = new Schema({
     }
 })
 
-userSchema.pre('init', function (next) {
-    const user = this;
-    console.log(user)
-    if (user.profileImage === '') {
-        delete user.profileImage
-    }
-    next()
-})
 
 userSchema.pre('save', function (next) {
     const user = this;

@@ -76,7 +76,9 @@ class ServiceProvider extends Component {
     }
 
     getUsers = () => {
+        console.log('fired')
         axios.get("/users").then(response => {
+            console.log(response.data)
             this.setState({
                 users: response.data
             })
