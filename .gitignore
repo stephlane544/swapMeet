@@ -5,3 +5,4 @@
 .vscode/
 *.orig
 .env
+db-backup
