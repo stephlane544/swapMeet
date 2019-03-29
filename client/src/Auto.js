@@ -19,8 +19,10 @@ class Auto extends React.Component {
 	componentDidMount() {
 		const filteredAuto = this.state.users.filter(user => {
 			for(let k in user) {
-				if(user[k].toString().toLowerCase().search("auto") === 0) {
-					return true
+				if(user[k] !== {} && user[k] !== [] && user[k] !== null){
+					if(user[k].toString().toLowerCase().search("auto") === 0) {
+						return true
+					}
 				}
 			}
 			

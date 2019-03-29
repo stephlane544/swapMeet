@@ -18,8 +18,10 @@ class ResidentialAndCommercial extends React.Component {
 	componentDidMount() {
 		const filteredRAC = this.state.users.filter(user => {
 			for(let k in user) {
-				if(user[k].toString().toLowerCase().search("home") === 0) {
-					return true
+				if(user[k] !== {} && user[k] !== [] && user[k] !== null){
+					if(user[k].toString().toLowerCase().search("home") === 0) {
+						return true
+					}
 				}
 			}
 			return filteredRAC

@@ -7,7 +7,8 @@ class Wellness extends React.Component {
 		this.state = {
 				message: false,
 				filteredUsers: [],
-				users: JSON.parse(localStorage.getItem('users')) || []		}
+				users: JSON.parse(localStorage.getItem('users')) || []		
+		}
 	}
 	
 	toProfile = (_id) => {
@@ -17,8 +18,10 @@ class Wellness extends React.Component {
 	componentDidMount() {
 		const filteredWellness = this.state.users.filter(user => {
 			for(let k in user) {
-				if(user[k].toString().toLowerCase().search("wellness") === 0) {
-					return true
+				if(user[k] !== {} && user[k] !== [] && user[k] !== null){
+					if(user[k].toString().toLowerCase().search("wellness") === 0) {
+						return true
+					}
 				}
 			}
 			return filteredWellness
