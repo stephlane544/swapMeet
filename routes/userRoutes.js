@@ -42,27 +42,4 @@ userRoute.route('/:_id')
                     })
             })
 
-
-// Need to find all Users that have a specific service
-// /services/user/:serviceName
-
-// serviceRoute.get("/user/:servicename", (req, res, next) => {
-//     User.find({serviceName: req.param.serviceName.toLowerCase()}, (err, usersWithService) => {
-        
-//     })
-// })
-
-
-            // serviceRoute('/service/:userID', async(req, res, next) => {
-            //     try{
-            //         const userResponse = await User.find({_id: req.params.userID})
-            //         const servicesResponse = awaitService.find({_id: { $in: userResponse.services}})
-            //         return res.status(200).send(servicesResponse)
-            //     }
-            //     catch(err){
-            //         res.status(500)
-            //         return next(err)
-            //     }
-            // })
-
 module.exports = (userRoute)

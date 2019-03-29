@@ -8,6 +8,25 @@
     padding: 0;
     
 }
+
+.errorMessageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.errorMessage{
+    color: red;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #2f2f2f;
+    border-radius: 15px;
+    padding: 1%;
+    margin-bottom: 5%;
+}
+
 .form{
     display: flex;
     flex-direction: column;

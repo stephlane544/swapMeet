@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
-
 import SideDrawer from "./SideDrawer.js";
-import Backdrop from "./Backdrop.js"
-
-
+import Backdrop from "./Backdrop.js";
 import './App.css';
-import Login from './Login'
-import UserProfile from './UserProfile'
-
+import Login from './Auth/Login';
+import UserProfile from './UserProfile';
 import NavBar from "./NavBar.js";
 import Home from "./Home.js";
 import Auto from "./Auto.js";
@@ -17,6 +13,7 @@ import Education from "./Education";
 import Events from "./Events";
 import ResidentialandCommercial from "./ResidentialAndCommercial";
 import Wellness from "./Wellness";
+import ProtectedRoute from './Auth/ProtectedRoute';
 
 
 class App extends Component {
@@ -64,7 +61,7 @@ class App extends Component {
           <Route path="/residentialandcommercial" component={ResidentialandCommercial}/>
           <Route path="/wellness" component={Wellness}/>
           <Route path='/login' component={Login} />
-          <Route path='/userprofile/:username' component={UserProfile} />
+          <ProtectedRoute path='/userprofile/:username' component={UserProfile} />
        </Switch>
       </div>
     );

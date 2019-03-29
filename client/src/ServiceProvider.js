@@ -17,13 +17,15 @@ class ServiceProvider extends Component {
         this.state = {
             users: [],
             user: JSON.parse(localStorage.getItem('user')) || {},
-            token: localStorage.getItem('token') || ''
+            token: localStorage.getItem('token') || '',
+            errorMessage: ''
         }
     }
 
     signup = (userInfo) => {
         return axios.post("/auth/signup", userInfo)
             .then(response => {
+                console.log(response.data.user)
                 const { user, token } = response.data
                 localStorage.setItem("token", token);
                 localStorage.setItem('user', JSON.stringify(user));
@@ -38,7 +40,6 @@ class ServiceProvider extends Component {
     login = (credentials) => {
         return axios.post('/auth/login', credentials).then(response => {
             const { token, user } = response.data
-            console.log(response.data)
             localStorage.setItem('token', token)
             localStorage.setItem('user', JSON.stringify(user))
             this.setState({

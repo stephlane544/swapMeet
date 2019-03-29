@@ -18,14 +18,13 @@ app.use('/services', require('./routes/serviceRoutes'))
 app.use(express.static(path.join(__dirname, 'client', 'build')))
 
 app.use((err, req, res, next) => {
-    console.error(err)
     if(err.name === 'UnauthorizedError'){
         res.status(err.status)
     }
     return res.send({message: err.message })
 })
 
-mongoose.connect(process.env.SECRET || 'mongodb://localhost:27017/users', {useNewUrlParser: true}).then(() => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/users', {useNewUrlParser: true}).then(() => {
     console.log('Connected to MongoDB')
 }).catch(err => console.log(err))
 
