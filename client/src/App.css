@@ -13,8 +13,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
-  height: 86.6vh;
+  grid-template-rows: 4fr 1fr 1fr;
+  grid-gap: 10%;
+  height: 98vh;
   width: 100%;
   margin-top: 150px;
 }
@@ -38,13 +39,15 @@ body {
 .navItems:hover,
 .navItems:active {
   color: white;
+}
 
+.spacing{
+  height: 100px;
 }
 
 .homeSearchForm {
   grid-row: 2/3;
   text-align: center;
-  vertical-align: center;
 }
 
 .homeSearchBar {
@@ -56,9 +59,12 @@ body {
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 7px;
+  margin-bottom: 2%;
 }
-   
+
 .homeSearchButton {
+  justify-content: center;
+  align-items: center;
   height: 30px;
   border-radius: 10px;
   background-color: black;
@@ -93,11 +99,21 @@ body {
 }
 
 .sorry {
-  grid-row: 3/4;
   text-align: center;
   color: black;
   font-family: 'Poiret One', cursive;
-  text-shadow: 1px 1px 1px black; 
+  background-color: #cfd9e3;
+  border-radius: 15px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.sorryMessageContainer{
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
@@ -106,14 +122,12 @@ body {
   .homeSearchBar {
     width: 30%;
     font-size: 20px;
-  
   }
   
   .homeSearchButton {
     width: 10%;
     font-size: 15px;
   }
-  
   
   .sorry {
     font-size: 45px;

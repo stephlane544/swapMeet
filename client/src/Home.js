@@ -66,26 +66,30 @@ class Home extends Component {
         return (
             <>
                 <div className="homeBack">
+                    <div className='spacing'></div>
                     <form className='homeSearchForm' onSubmit={this.handleSubmit}>
                         <input className="homeSearchBar"
                         type="text"
                         placeholder="Search for Swappers"
                         name="input"
                         value={this.state.name}
-                        onChange={this.handleChange}/><br></br>
-                        <button className="homeSearchButton">SEARCH</button>
+                        onChange={this.handleChange}/>
+                        <div className='searchButtonContainer'>
+                            <button className="homeSearchButton">SEARCH</button>
+                        </div>
                     </form>
-                
-                    {this.state.searched && this.state.message ?
-                        <div className="sorry">
-                            <div className="sorryMessage">
-                                Sorry, nothing matches your search.
-                            </div>
-                            <img className='sorryImage' src={sorry} alt=""/>
-                        </div> 
-                    :
-                        null
-                    }
+                    <div className='sorryMessageContainer'>
+                        {this.state.searched && this.state.message ?
+                            <div className="sorry">
+                                <div className="sorryMessage">
+                                    Sorry, nothing matches your search.
+                                </div>
+                                <img className='sorryImage' src={sorry} alt=""/>
+                            </div> 
+                        :
+                            null
+                        }
+                    </div>
                 </div>
                 {this.state.searched && !this.state.message ?
                     <div className="gridContainer">
