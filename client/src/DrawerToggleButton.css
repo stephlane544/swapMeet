@@ -32,7 +32,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px) and (min-width: 450px) {
     .toggleBtn {
         height: 30px;
         width: 5px;
@@ -40,6 +40,24 @@
     
     .toggleBtnLine {
         width: 40px;
+        height: 3px;
+        background: black;
+    }
+    
+    .navImg {
+        width: 5%;
+        height: 5%;
+    }
+}
+
+@media (max-width: 450px) {
+    .toggleBtn {
+        height: 30px;
+        width: 5px;
+    }
+    
+    .toggleBtnLine {
+        width: 60px;
         height: 3px;
         background: black;
     }
