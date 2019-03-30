@@ -31,7 +31,6 @@ body {
 }
 
 .logo{
-  padding-left: 7%;
   width: 150px;
 }
   
@@ -195,10 +194,6 @@ body {
 }
 
 @media (max-width: 450px) {
-  .logo{
-    margin-left: 8%;
-  }
-
   .loginOnHome {
     font-size: 12px;
   }
@@ -209,11 +204,15 @@ body {
   }
 
   .logo{
-    padding-left: 7%;
     width: 100px;
   }
 
   .navItems{
     width: 60px;
+  }
+
+  .homeBack{
+    margin-top: 80px;
+
   }
 }
