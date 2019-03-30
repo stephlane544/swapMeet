@@ -81,7 +81,7 @@ class Home extends Component {
                             <div className="sorryMessage">
                                 Sorry, nothing matches your search.
                             </div>
-                            <img src={sorry} alt=""/>
+                            <img className='sorryImage' src={sorry} alt=""/>
                         </div> 
                     :
                         null

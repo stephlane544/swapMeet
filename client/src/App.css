@@ -216,4 +216,8 @@ body {
     width: 24%;
     font-size: 12px;
   }
+
+  .sorryImage{
+    height: 40px;
+  }
 }
