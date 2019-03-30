@@ -217,8 +217,12 @@ body {
 
   .homeBack{
     margin-top: 80px;
-
   }
+
+  .spacing{
+    height: 50px;
+  }
+
   .homeSearchBar {
     height: 20px;
     width: 70%;
