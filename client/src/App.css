@@ -12,7 +12,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: table;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
   height: 86.6vh;
   width: 100%;
   margin-top: 150px;
@@ -41,9 +42,9 @@ body {
 }
 
 .homeSearchForm {
-  display: table-cell;
-  vertical-align: middle;
+  grid-row: 2/3;
   text-align: center;
+  vertical-align: center;
 }
 
 .homeSearchBar {
@@ -92,8 +93,8 @@ body {
 }
 
 .sorry {
-  display: flex;
-  align-items: center;
+  grid-row: 3/4;
+  text-align: center;
   color: white;
   font-family: 'Poiret One', cursive;
 }
@@ -214,5 +215,16 @@ body {
   .homeBack{
     margin-top: 80px;
 
+  }
+  .homeSearchBar {
+    height: 20px;
+    width: 70%;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .homeSearchButton {
+    width: 24%;
+    font-size: 12px;
   }
 }

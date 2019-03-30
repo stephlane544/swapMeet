@@ -37,8 +37,10 @@ class Home extends Component {
         let input = this.state.input.toUpperCase()
         const filteredUsers = this.props.users.filter(user => {
             for(let k in user) {
-                if(user[k].toString().toUpperCase().search(input) === 0) {
-                    return true
+                if(user[k] !== {} && user[k] !== [] && user[k] !== null){
+                    if(user[k].toString().toUpperCase().search(input) === 0) {
+                        return true
+                    }
                 }
             }
             const swappers = user.swapper
@@ -73,24 +75,24 @@ class Home extends Component {
                         onChange={this.handleChange}/><br></br>
                         <button className="homeSearchButton">SEARCH</button>
                     </form>
-                </div>
-                {this.state.searched ?
-                    <div>
-                        { this.state.message ? 
-                            <div className="sorry">
-                                <div className="sorryMessage">
-                                    Sorry, nothing matches your search.
-                                </div>
-                                <img src={sorry} alt=""/>
-                            </div> 
-                        :
-                            <div className="gridContainer">
-                                {this.state.filteredUsers.map((result, i) => <DisplayServices key={i} result={result} />)}
+                
+                    {this.state.searched && this.state.message ?
+                        <div className="sorry">
+                            <div className="sorryMessage">
+                                Sorry, nothing matches your search.
                             </div>
-                        }
-                        </div>
+                            <img src={sorry} alt=""/>
+                        </div> 
+                    :
+                        null
+                    }
+                </div>
+                {this.state.searched && !this.state.message ?
+                    <div className="gridContainer">
+                        {this.state.filteredUsers.map((result, i) => <DisplayServices key={i} result={result} />)}
+                    </div>
                 :
-                    null
+                        null
                 }
             </>
         )
