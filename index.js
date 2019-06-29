@@ -7,7 +7,6 @@ const expressJwt = require('express-jwt')
 const morgan = require('morgan')
 const path = require('path')
 
-
 app.use(morgan('dev'))
 app.use(express.json());
 app.use('/api', expressJwt({secret: process.env.SECRET}))
@@ -28,10 +27,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/users', {
     console.log('Connected to MongoDB')
 }).catch(err => console.log(err))
 
-
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 })
+
 app.listen(port, () => {
     console.log(`server is running on port ${port}`)
 })

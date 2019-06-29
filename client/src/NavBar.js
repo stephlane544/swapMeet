@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./DrawerToggleButton.css";
 import {withServices} from './ServiceProvider'
 import { withRouter } from 'react-router-dom'
-
+import './App.css';
 import swapmeetLogo from "./images/swapmeetLogo.png";
 import login from "./images/login.png";
 
